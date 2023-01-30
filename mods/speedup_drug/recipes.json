@@ -41,7 +41,7 @@
   {
     "type": "recipe",
     "activity_level": "NO_EXERCISE",
-    "result": "SD_speedup_drug_day",
+    "result": "SD_speedup_drug_craft_day",
     "category": "CC_CHEM",
     "subcategory": "CSC_CHEM_DRUGS",
     "skill_used": "fabrication",
@@ -56,7 +56,7 @@
   {
     "type": "recipe",
     "activity_level": "NO_EXERCISE",
-    "result": "SD_speedup_drug_week",
+    "result": "SD_speedup_drug_craft_week",
     "category": "CC_CHEM",
     "subcategory": "CSC_CHEM_DRUGS",
     "skill_used": "fabrication",
@@ -71,7 +71,7 @@
   {
     "type": "recipe",
     "activity_level": "NO_EXERCISE",
-    "result": "SD_speedup_drug_month",
+    "result": "SD_speedup_drug_craft_month",
     "category": "CC_CHEM",
     "subcategory": "CSC_CHEM_DRUGS",
     "skill_used": "fabrication",
@@ -86,7 +86,67 @@
   {
     "type": "recipe",
     "activity_level": "NO_EXERCISE",
-    "result": "SD_speedup_drug_year",
+    "result": "SD_speedup_drug_craft_year",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_DRUGS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "0 s",
+    "autolearn": true,
+    "components": [
+      [ [ "SD_mega_calory", 1000 ] ],
+      [ [ "water_clean", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "SD_speedup_drug_learn_day",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_DRUGS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "0 s",
+    "autolearn": true,
+    "components": [
+      [ [ "SD_mega_calory", 2 ] ],
+      [ [ "water_clean", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "SD_speedup_drug_learn_week",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_DRUGS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "0 s",
+    "autolearn": true,
+    "components": [
+      [ [ "SD_mega_calory", 16 ] ],
+      [ [ "water_clean", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "SD_speedup_drug_learn_month",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_DRUGS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "0 s",
+    "autolearn": true,
+    "components": [
+      [ [ "SD_mega_calory", 80 ] ],
+      [ [ "water_clean", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "SD_speedup_drug_learn_year",
     "category": "CC_CHEM",
     "subcategory": "CSC_CHEM_DRUGS",
     "skill_used": "fabrication",

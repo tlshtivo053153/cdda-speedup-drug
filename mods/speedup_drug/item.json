@@ -84,6 +84,18 @@
     }
   },
   {
+    "id": "SD_mega_calory",
+    "type": "AMMO",
+    "copy-from": "ash",
+    "name": "メガカロリー粉末 [SD]",
+    "description": "食べ物からエネルギーを抽出して粉末状にしたものです。加速薬の素材になります。",
+    "weight": 1,
+    "volume": 0,
+    "count": 10,
+    "stack_size": 100,
+    "flags": [ "TRADER_AVOID", "ZERO_WEIGHT", "UNBREAKABLE_MELEE" ]
+  },
+  {
     "abstract": "SD_abstract_speedup_drug",
     "name": { "str": "speedup drug abstract" },
     "description": "speedup drug abstract",
@@ -105,51 +117,75 @@
     "freezing_point": -20
   },
   {
-    "id": "SD_speedup_drug_day",
+    "id": "SD_speedup_drug_craft_day",
     "copy-from": "SD_abstract_speedup_drug",
-    "name": { "str": "加速薬(日) [SD]" },
-    "description": "時間を加速する薬です。効果時間は1時間です。",
-    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_day", "no_fail": true, "level": 0 },
+    "name": { "str": "クラフト加速薬(日) [SD]" },
+    "description": "クラフト時間を加速する薬です。効果時間は1時間です。",
+    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_craft_day", "no_fail": true, "level": 0 },
     "type": "COMESTIBLE",
     "fun": 10
   },
   {
-    "id": "SD_speedup_drug_week",
+    "id": "SD_speedup_drug_craft_week",
     "copy-from": "SD_abstract_speedup_drug",
-    "name": { "str": "加速薬(週) [SD]" },
-    "description": "時間を加速する薬です。効果時間は7時間です。",
-    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_week", "no_fail": true, "level": 0 },
+    "name": { "str": "クラフト加速薬(週) [SD]" },
+    "description": "クラフト時間を加速する薬です。効果時間は7時間です。",
+    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_craft_week", "no_fail": true, "level": 0 },
     "type": "COMESTIBLE",
     "fun": 100
   },
   {
-    "id": "SD_speedup_drug_month",
+    "id": "SD_speedup_drug_craft_month",
     "copy-from": "SD_abstract_speedup_drug",
-    "name": { "str": "加速薬(月) [SD]" },
-    "description": "時間を加速する薬です。効果時間は16時間です。",
-    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_month", "no_fail": true, "level": 0 },
+    "name": { "str": "クラフト加速薬(月) [SD]" },
+    "description": "クラフト時間を加速する薬です。効果時間は16時間です。",
+    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_craft_month", "no_fail": true, "level": 0 },
     "type": "COMESTIBLE",
     "fun": 500
   },
   {
-    "id": "SD_speedup_drug_year",
+    "id": "SD_speedup_drug_craft_year",
     "copy-from": "SD_abstract_speedup_drug",
-    "name": { "str": "加速薬(年) [SD]" },
-    "description": "時間を加速する薬です。効果時間は1週間です。",
-    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_year", "no_fail": true, "level": 0 },
+    "name": { "str": "クラフト加速薬(年) [SD]" },
+    "description": "クラフト時間を加速する薬です。効果時間は1週間です。",
+    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_craft_year", "no_fail": true, "level": 0 },
     "type": "COMESTIBLE",
     "fun": 3000
   },
   {
-    "id": "SD_mega_calory",
-    "type": "AMMO",
-    "copy-from": "ash",
-    "name": "メガカロリー粉末 [SD]",
-    "description": "食べ物からエネルギーを抽出して粉末状にしたものです。加速薬の素材になります。",
-    "weight": 1,
-    "volume": 0,
-    "count": 10,
-    "stack_size": 100,
-    "flags": [ "TRADER_AVOID", "ZERO_WEIGHT", "UNBREAKABLE_MELEE" ]
+    "id": "SD_speedup_drug_learn_day",
+    "copy-from": "SD_abstract_speedup_drug",
+    "name": { "str": "学習加速薬(日) [SD]" },
+    "description": "学習時間を加速する薬です。効果時間は1時間です。",
+    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_learn_day", "no_fail": true, "level": 0 },
+    "type": "COMESTIBLE",
+    "fun": 10
+  },
+  {
+    "id": "SD_speedup_drug_learn_week",
+    "copy-from": "SD_abstract_speedup_drug",
+    "name": { "str": "学習加速薬(週) [SD]" },
+    "description": "学習時間を加速する薬です。効果時間は7時間です。",
+    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_learn_week", "no_fail": true, "level": 0 },
+    "type": "COMESTIBLE",
+    "fun": 100
+  },
+  {
+    "id": "SD_speedup_drug_learn_month",
+    "copy-from": "SD_abstract_speedup_drug",
+    "name": { "str": "学習加速薬(月) [SD]" },
+    "description": "学習時間を加速する薬です。効果時間は16時間です。",
+    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_learn_month", "no_fail": true, "level": 0 },
+    "type": "COMESTIBLE",
+    "fun": 500
+  },
+  {
+    "id": "SD_speedup_drug_learn_year",
+    "copy-from": "SD_abstract_speedup_drug",
+    "name": { "str": "学習加速薬(年) [SD]" },
+    "description": "学習時間を加速する薬です。効果時間は1週間です。",
+    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_learn_year", "no_fail": true, "level": 0 },
+    "type": "COMESTIBLE",
+    "fun": 3000
   }
 ]

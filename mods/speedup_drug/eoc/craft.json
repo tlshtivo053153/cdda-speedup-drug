@@ -1,14 +1,18 @@
 [
   {
-    "id": "EOC_START_SPEEDUP_DAY",
+    "id": "EOC_START_SPEEDUP_CRAFT_DAY",
     "type": "effect_on_condition",
     "condition": {
       "not": {
         "u_has_any_trait" : [
-          "SD_SPEEDUP_DAY",
-          "SD_SPEEDUP_WEEK",
-          "SD_SPEEDUP_MONTH",
-          "SD_SPEEDUP_YEAR"
+          "SD_SPEEDUP_CRAFT_DAY",
+          "SD_SPEEDUP_CRAFT_WEEK",
+          "SD_SPEEDUP_CRAFT_MONTH",
+          "SD_SPEEDUP_CRAFT_YEAR",
+          "SD_SPEEDUP_LEARN_DAY",
+          "SD_SPEEDUP_LEARN_WEEK",
+          "SD_SPEEDUP_LEARN_MONTH",
+          "SD_SPEEDUP_LEARN_YEAR"
         ]
       }
     },
@@ -20,23 +24,23 @@
           { "const": 60 }
         ]
       },
-      { "u_add_trait" : "SD_SPEEDUP_DAY" },
+      { "u_add_trait" : "SD_SPEEDUP_CRAFT_DAY" },
       { "u_message": "時を加速します(一日)。", "type": "good" }
     ]
   },
   {
-    "id": "EOC_CHECK_SPEEDUP_DAY",
+    "id": "EOC_CHECK_SPEEDUP_CRAFT_DAY",
     "type": "effect_on_condition",
     "recurrence": "1 minutes",
-    "condition": { "u_has_trait": "SD_SPEEDUP_DAY" },
+    "condition": { "u_has_trait": "SD_SPEEDUP_CRAFT_DAY" },
     "deactivate_condition": {
-      "not": { "u_has_trait" : "SD_SPEEDUP_DAY" }
+      "not": { "u_has_trait" : "SD_SPEEDUP_CRAFT_DAY" }
     },
     "effect": [
       { 
         "run_eocs": [
           {
-            "id": "EOC_CHECK_END_SPEEDUP_DAY",
+            "id": "EOC_CHECK_END_SPEEDUP_CRAFT_DAY",
             "condition": {
               "compare_int": [
                 { "global_val": "var", "var_name": "count_time_minutes" },
@@ -45,7 +49,7 @@
               ]
             },
             "effect": {
-              "run_eocs": [ "EOC_END_SPEEDUP_DAY" ]
+              "run_eocs": [ "EOC_END_SPEEDUP_CRAFT_DAY" ]
             }
           }
         ]
@@ -60,7 +64,7 @@
     ]
   },
   {
-    "id": "EOC_END_SPEEDUP_DAY",
+    "id": "EOC_END_SPEEDUP_CRAFT_DAY",
     "type": "effect_on_condition",
     "effect": [
       {
@@ -71,20 +75,24 @@
         ]
       },
       { "run_eocs": [ "EOC_FIX_TIME" ] },
-      { "u_lose_trait" : "SD_SPEEDUP_DAY" },
+      { "u_lose_trait" : "SD_SPEEDUP_CRAFT_DAY" },
       { "u_message": "時間の流れが戻りました。", "type": "bad" }
     ]
   },
   {
-    "id": "EOC_START_SPEEDUP_WEEK",
+    "id": "EOC_START_SPEEDUP_CRAFT_WEEK",
     "type": "effect_on_condition",
     "condition": {
       "not": {
         "u_has_any_trait" : [
-          "SD_SPEEDUP_DAY",
-          "SD_SPEEDUP_WEEK",
-          "SD_SPEEDUP_MONTH",
-          "SD_SPEEDUP_YEAR"
+          "SD_SPEEDUP_CRAFT_DAY",
+          "SD_SPEEDUP_CRAFT_WEEK",
+          "SD_SPEEDUP_CRAFT_MONTH",
+          "SD_SPEEDUP_CRAFT_YEAR",
+          "SD_SPEEDUP_LEARN_DAY",
+          "SD_SPEEDUP_LEARN_WEEK",
+          "SD_SPEEDUP_LEARN_MONTH",
+          "SD_SPEEDUP_LEARN_YEAR"
         ]
       }
     },
@@ -96,23 +104,23 @@
           { "const": 420 }
         ]
       },
-      { "u_add_trait" : "SD_SPEEDUP_WEEK" },
+      { "u_add_trait" : "SD_SPEEDUP_CRAFT_WEEK" },
       { "u_message": "時を加速します(一週)。", "type": "good" }
     ]
   },
   {
-    "id": "EOC_CHECK_SPEEDUP_WEEK",
+    "id": "EOC_CHECK_SPEEDUP_CRAFT_WEEK",
     "type": "effect_on_condition",
     "recurrence": "1 minutes",
-    "condition": { "u_has_trait": "SD_SPEEDUP_WEEK" },
+    "condition": { "u_has_trait": "SD_SPEEDUP_CRAFT_WEEK" },
     "deactivate_condition": {
-      "not": { "u_has_trait" : "SD_SPEEDUP_WEEK" }
+      "not": { "u_has_trait" : "SD_SPEEDUP_CRAFT_WEEK" }
     },
     "effect": [
       { 
         "run_eocs": [
           {
-            "id": "EOC_CHECK_END_SPEEDUP_WEEK",
+            "id": "EOC_CHECK_END_SPEEDUP_CRAFT_WEEK",
             "condition": {
               "compare_int": [
                 { "global_val": "var", "var_name": "count_time_minutes" },
@@ -121,7 +129,7 @@
               ]
             },
             "effect": {
-              "run_eocs": [ "EOC_END_SPEEDUP_WEEK" ]
+              "run_eocs": [ "EOC_END_SPEEDUP_CRAFT_WEEK" ]
             }
           }
         ]
@@ -136,7 +144,7 @@
     ]
   },
   {
-    "id": "EOC_END_SPEEDUP_WEEK",
+    "id": "EOC_END_SPEEDUP_CRAFT_WEEK",
     "type": "effect_on_condition",
     "effect": [
       {
@@ -147,20 +155,24 @@
         ]
       },
       { "run_eocs": [ "EOC_FIX_TIME" ] },
-      { "u_lose_trait" : "SD_SPEEDUP_WEEK" },
+      { "u_lose_trait" : "SD_SPEEDUP_CRAFT_WEEK" },
       { "u_message": "時間の流れが戻りました。", "type": "bad" }
     ]
   },
   {
-    "id": "EOC_START_SPEEDUP_MONTH",
+    "id": "EOC_START_SPEEDUP_CRAFT_MONTH",
     "type": "effect_on_condition",
     "condition": {
       "not": {
         "u_has_any_trait" : [
-          "SD_SPEEDUP_DAY",
-          "SD_SPEEDUP_WEEK",
-          "SD_SPEEDUP_MONTH",
-          "SD_SPEEDUP_YEAR"
+          "SD_SPEEDUP_CRAFT_DAY",
+          "SD_SPEEDUP_CRAFT_WEEK",
+          "SD_SPEEDUP_CRAFT_MONTH",
+          "SD_SPEEDUP_CRAFT_YEAR",
+          "SD_SPEEDUP_LEARN_DAY",
+          "SD_SPEEDUP_LEARN_WEEK",
+          "SD_SPEEDUP_LEARN_MONTH",
+          "SD_SPEEDUP_LEARN_YEAR"
         ]
       }
     },
@@ -172,23 +184,23 @@
           { "const": 960 }
         ]
       },
-      { "u_add_trait" : "SD_SPEEDUP_MONTH" },
+      { "u_add_trait" : "SD_SPEEDUP_CRAFT_MONTH" },
       { "u_message": "時を加速します(一月)。", "type": "good" }
     ]
   },
   {
-    "id": "EOC_CHECK_SPEEDUP_MONTH",
+    "id": "EOC_CHECK_SPEEDUP_CRAFT_MONTH",
     "type": "effect_on_condition",
     "recurrence": "1 minutes",
-    "condition": { "u_has_trait": "SD_SPEEDUP_MONTH" },
+    "condition": { "u_has_trait": "SD_SPEEDUP_CRAFT_MONTH" },
     "deactivate_condition": {
-      "not": { "u_has_trait" : "SD_SPEEDUP_MONTH" }
+      "not": { "u_has_trait" : "SD_SPEEDUP_CRAFT_MONTH" }
     },
     "effect": [
       { 
         "run_eocs": [
           {
-            "id": "EOC_CHECK_END_SPEEDUP_MONTH",
+            "id": "EOC_CHECK_END_SPEEDUP_CRAFT_MONTH",
             "condition": {
               "compare_int": [
                 { "global_val": "var", "var_name": "count_time_minutes" },
@@ -197,7 +209,7 @@
               ]
             },
             "effect": {
-              "run_eocs": [ "EOC_END_SPEEDUP_MONTH" ]
+              "run_eocs": [ "EOC_END_SPEEDUP_CRAFT_MONTH" ]
             }
           }
         ]
@@ -212,7 +224,7 @@
     ]
   },
   {
-    "id": "EOC_END_SPEEDUP_MONTH",
+    "id": "EOC_END_SPEEDUP_CRAFT_MONTH",
     "type": "effect_on_condition",
     "effect": [
       {
@@ -223,20 +235,24 @@
         ]
       },
       { "run_eocs": [ "EOC_FIX_TIME" ] },
-      { "u_lose_trait" : "SD_SPEEDUP_MONTH" },
+      { "u_lose_trait" : "SD_SPEEDUP_CRAFT_MONTH" },
       { "u_message": "時間の流れが戻りました。", "type": "bad" }
     ]
   },
   {
-    "id": "EOC_START_SPEEDUP_YEAR",
+    "id": "EOC_START_SPEEDUP_CRAFT_YEAR",
     "type": "effect_on_condition",
     "condition": {
       "not": {
         "u_has_any_trait" : [
-          "SD_SPEEDUP_DAY",
-          "SD_SPEEDUP_WEEK",
-          "SD_SPEEDUP_MONTH",
-          "SD_SPEEDUP_YEAR"
+          "SD_SPEEDUP_CRAFT_DAY",
+          "SD_SPEEDUP_CRAFT_WEEK",
+          "SD_SPEEDUP_CRAFT_MONTH",
+          "SD_SPEEDUP_CRAFT_YEAR",
+          "SD_SPEEDUP_LEARN_DAY",
+          "SD_SPEEDUP_LEARN_WEEK",
+          "SD_SPEEDUP_LEARN_MONTH",
+          "SD_SPEEDUP_LEARN_YEAR"
         ]
       }
     },
@@ -248,23 +264,23 @@
           { "const": 10080 }
         ]
       },
-      { "u_add_trait" : "SD_SPEEDUP_YEAR" },
+      { "u_add_trait" : "SD_SPEEDUP_CRAFT_YEAR" },
       { "u_message": "時を加速します(一年)。", "type": "good" }
     ]
   },
   {
-    "id": "EOC_CHECK_SPEEDUP_YEAR",
+    "id": "EOC_CHECK_SPEEDUP_CRAFT_YEAR",
     "type": "effect_on_condition",
     "recurrence": "1 minutes",
-    "condition": { "u_has_trait": "SD_SPEEDUP_YEAR" },
+    "condition": { "u_has_trait": "SD_SPEEDUP_CRAFT_YEAR" },
     "deactivate_condition": {
-      "not": { "u_has_trait" : "SD_SPEEDUP_YEAR" }
+      "not": { "u_has_trait" : "SD_SPEEDUP_CRAFT_YEAR" }
     },
     "effect": [
       { 
         "run_eocs": [
           {
-            "id": "EOC_CHECK_END_SPEEDUP_YEAR",
+            "id": "EOC_CHECK_END_SPEEDUP_CRAFT_YEAR",
             "condition": {
               "compare_int": [
                 { "global_val": "var", "var_name": "count_time_minutes" },
@@ -273,7 +289,7 @@
               ]
             },
             "effect": {
-              "run_eocs": [ "EOC_END_SPEEDUP_YEAR" ]
+              "run_eocs": [ "EOC_END_SPEEDUP_CRAFT_YEAR" ]
             }
           }
         ]
@@ -288,7 +304,7 @@
     ]
   },
   {
-    "id": "EOC_END_SPEEDUP_YEAR",
+    "id": "EOC_END_SPEEDUP_CRAFT_YEAR",
     "type": "effect_on_condition",
     "effect": [
       {
@@ -299,120 +315,8 @@
         ]
       },
       { "run_eocs": [ "EOC_FIX_TIME" ] },
-      { "u_lose_trait" : "SD_SPEEDUP_YEAR" },
+      { "u_lose_trait" : "SD_SPEEDUP_CRAFT_YEAR" },
       { "u_message": "時間の流れが戻りました。", "type": "bad" }
-    ]
-  },
-  {
-    "id": "EOC_FIX_TIME",
-    "type": "effect_on_condition",
-    "effect": [
-      {
-        "arithmetic": [
-          { "global_val": "var",
-            "var_name": "tmp_time_since_cataclysm"
-          },
-          "=",
-          { "time_since_cataclysm": "turns" }
-        ]
-      },
-      {
-        "arithmetic": [
-          { "time_since_cataclysm": "turns" },
-          "+=",
-          { "const": 0 }
-        ]
-      },
-      {
-        "arithmetic": [
-          { "global_val": "var",
-            "var_name": "option_initial_day"
-          },
-          "=",
-          { "arithmetic": [
-            { "global_val": "var",
-              "var_name": "tmp_time_since_cataclysm"
-            },
-            "-",
-            { "time_since_cataclysm": "turns" }
-            ]
-          }
-        ]
-      },
-      {
-        "arithmetic": [
-          { "global_val": "var",
-            "var_name": "option_initial_day"
-          },
-          "*=",
-          { "const": 2 }
-        ]
-      },
-      {
-        "arithmetic": [
-          { "time_since_cataclysm": "turns" },
-          "+=",
-          { "arithmetic": [
-              { "global_val": "var",
-                "var_name": "option_initial_day"
-              },
-              "+",
-              {
-                "global_val": "var",
-                "var_name": "mih_add_time"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "EOC_SHOW_LIMIT_TIME",
-    "type": "effect_on_condition",
-    "condition": {
-      "not": {
-        "u_has_any_trait" : [
-          "SD_SPEEDUP_DAY",
-          "SD_SPEEDUP_WEEK",
-          "SD_SPEEDUP_MONTH",
-          "SD_SPEEDUP_YEAR"
-        ]
-      }
-    },
-    "effect": { "u_message": "このメッセージが表示された場合は、バグが発生しています。" },
-    "false_effect": [
-      { "arithmetic": [
-          { "u_val": "var", "var_name": "tmp_limit_time_day" },
-          "=",
-          { "global_val": "var", "var_name": "count_time_minutes" },
-          "/",
-          { "const": 1440 }
-          ]
-      },
-      { "arithmetic": [
-          { "u_val": "var", "var_name": "tmp_limit_time_hour" },
-          "=",
-          { "global_val": "var", "var_name": "count_time_minutes" },
-          "%",
-          { "const": 1440 }
-        ]
-      },
-      { "arithmetic": [
-          { "u_val": "var", "var_name": "tmp_limit_time_hour" },
-          "/=",
-          { "const": 60 }
-        ]
-      },
-      { "arithmetic": [
-          { "u_val": "var", "var_name": "tmp_limit_time_minute" },
-          "=",
-          { "global_val": "var", "var_name": "count_time_minutes" },
-          "%",
-          { "const": 60 }
-        ]
-      },
-      { "u_message": "残り時間は<u_val:tmp_limit_time_day>日<u_val:tmp_limit_time_hour>時間<u_val:tmp_limit_time_minute>分です。" }
     ]
   }
 ]

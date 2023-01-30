@@ -1,0 +1,118 @@
+[
+  {
+    "id": "EOC_FIX_TIME",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "arithmetic": [
+          { "global_val": "var",
+            "var_name": "tmp_time_since_cataclysm"
+          },
+          "=",
+          { "time_since_cataclysm": "turns" }
+        ]
+      },
+      {
+        "arithmetic": [
+          { "time_since_cataclysm": "turns" },
+          "+=",
+          { "const": 0 }
+        ]
+      },
+      {
+        "arithmetic": [
+          { "global_val": "var",
+            "var_name": "option_initial_day"
+          },
+          "=",
+          { "arithmetic": [
+            { "global_val": "var",
+              "var_name": "tmp_time_since_cataclysm"
+            },
+            "-",
+            { "time_since_cataclysm": "turns" }
+            ]
+          }
+        ]
+      },
+      {
+        "arithmetic": [
+          { "global_val": "var",
+            "var_name": "option_initial_day"
+          },
+          "*=",
+          { "const": 2 }
+        ]
+      },
+      {
+        "arithmetic": [
+          { "time_since_cataclysm": "turns" },
+          "+=",
+          { "arithmetic": [
+              { "global_val": "var",
+                "var_name": "option_initial_day"
+              },
+              "+",
+              {
+                "global_val": "var",
+                "var_name": "mih_add_time"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EOC_SHOW_LIMIT_TIME",
+    "type": "effect_on_condition",
+    "condition": {
+      "not": {
+        "u_has_any_trait" : [
+          "SD_SPEEDUP_CRAFT_DAY",
+          "SD_SPEEDUP_CRAFT_WEEK",
+          "SD_SPEEDUP_CRAFT_MONTH",
+          "SD_SPEEDUP_CRAFT_YEAR",
+          "SD_SPEEDUP_LEARN_DAY",
+          "SD_SPEEDUP_LEARN_WEEK",
+          "SD_SPEEDUP_LEARN_MONTH",
+          "SD_SPEEDUP_LEARN_YEAR"
+        ]
+      }
+    },
+    "effect": { "u_message": "このメッセージが表示された場合は、バグが発生しています。" },
+    "false_effect": [
+      { "arithmetic": [
+          { "u_val": "var", "var_name": "tmp_limit_time_day" },
+          "=",
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "/",
+          { "const": 1440 }
+          ]
+      },
+      { "arithmetic": [
+          { "u_val": "var", "var_name": "tmp_limit_time_hour" },
+          "=",
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "%",
+          { "const": 1440 }
+        ]
+      },
+      { "arithmetic": [
+          { "u_val": "var", "var_name": "tmp_limit_time_hour" },
+          "/=",
+          { "const": 60 }
+        ]
+      },
+      { "arithmetic": [
+          { "u_val": "var", "var_name": "tmp_limit_time_minute" },
+          "=",
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "%",
+          { "const": 60 }
+        ]
+      },
+      { "u_message": "残り時間は<u_val:tmp_limit_time_day>日<u_val:tmp_limit_time_hour>時間<u_val:tmp_limit_time_minute>分です。" }
+    ]
+  }
+]
