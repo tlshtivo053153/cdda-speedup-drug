@@ -1,0 +1,46 @@
+[
+  {
+    "id": "spell_start_speedup_day",
+    "type": "SPELL",
+    "name": "時間加速(日)",
+    "description": "時間を加速します。効果時間は1時間です。",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_START_SPEEDUP_DAY",
+    "shape": "blast",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_LEGS", "SILENT" ]
+  },
+  {
+    "id": "spell_start_speedup_week",
+    "type": "SPELL",
+    "name": "時間加速(週)",
+    "description": "時間を加速します。効果時間は7時間です。",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_START_SPEEDUP_WEEK",
+    "shape": "blast",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_LEGS", "SILENT" ]
+  },
+  {
+    "id": "spell_start_speedup_month",
+    "type": "SPELL",
+    "name": "時間加速(月)",
+    "description": "時間を加速します。効果時間は16時間です。",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_START_SPEEDUP_MONTH",
+    "shape": "blast",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_LEGS", "SILENT" ]
+  },
+  {
+    "id": "spell_start_speedup_year",
+    "type": "SPELL",
+    "name": "時間加速(年)",
+    "description": "時間を加速します。効果時間は1週間です。",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_START_SPEEDUP_YEAR",
+    "shape": "blast",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_LEGS", "SILENT" ]
+  }
+]

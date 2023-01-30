@@ -1,0 +1,34 @@
+[
+  {
+    "type": "enchantment",
+    "id": "SD_SPEEDUP_DAY_BUFF",
+    "values": [
+      { "value": "LEARNING_FOCUS", "multiply": 15 },
+      { "value": "READING_EXP", "multiply": -0.9375 }
+    ]
+  },
+  {
+    "type": "enchantment",
+    "id": "SD_SPEEDUP_WEEK_BUFF",
+    "values": [
+      { "value": "LEARNING_FOCUS", "multiply": 15 },
+      { "value": "READING_EXP", "multiply": -0.9375 }
+    ]
+  },
+  {
+    "type": "enchantment",
+    "id": "SD_SPEEDUP_MONTH_BUFF",
+    "values": [
+      { "value": "LEARNING_FOCUS", "multiply": 29 },
+      { "value": "READING_EXP", "multiply": -0.966666 }
+    ]
+  },
+  {
+    "type": "enchantment",
+    "id": "SD_SPEEDUP_YEAR_BUFF",
+    "values": [
+      { "value": "LEARNING_FOCUS", "multiply": 51.142857 },
+      { "value": "READING_EXP", "multiply": -0.980822 }
+    ]
+  }
+]

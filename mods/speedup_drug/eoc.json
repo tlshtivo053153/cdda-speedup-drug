@@ -1,0 +1,418 @@
+[
+  {
+    "id": "EOC_START_SPEEDUP_DAY",
+    "type": "effect_on_condition",
+    "condition": {
+      "not": {
+        "u_has_any_trait" : [
+          "SD_SPEEDUP_DAY",
+          "SD_SPEEDUP_WEEK",
+          "SD_SPEEDUP_MONTH",
+          "SD_SPEEDUP_YEAR"
+        ]
+      }
+    },
+    "effect": [
+      { 
+        "arithmetic": [
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "=",
+          { "const": 60 }
+        ]
+      },
+      { "u_add_trait" : "SD_SPEEDUP_DAY" },
+      { "u_message": "時を加速します(一日)。", "type": "good" }
+    ]
+  },
+  {
+    "id": "EOC_CHECK_SPEEDUP_DAY",
+    "type": "effect_on_condition",
+    "recurrence": "1 minutes",
+    "condition": { "u_has_trait": "SD_SPEEDUP_DAY" },
+    "deactivate_condition": {
+      "not": { "u_has_trait" : "SD_SPEEDUP_DAY" }
+    },
+    "effect": [
+      { 
+        "run_eocs": [
+          {
+            "id": "EOC_CHECK_END_SPEEDUP_DAY",
+            "condition": {
+              "compare_int": [
+                { "global_val": "var", "var_name": "count_time_minutes" },
+                "<=",
+                { "const": 0 }
+              ]
+            },
+            "effect": {
+              "run_eocs": [ "EOC_END_SPEEDUP_DAY" ]
+            }
+          }
+        ]
+      },
+      { 
+        "arithmetic": [
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "-=",
+          { "const": 1 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EOC_END_SPEEDUP_DAY",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "arithmetic": [
+          { "global_val": "var", "var_name": "mih_add_time" },
+          "=",
+          { "time": "86400 turns" }
+        ]
+      },
+      { "run_eocs": [ "EOC_FIX_TIME" ] },
+      { "u_lose_trait" : "SD_SPEEDUP_DAY" },
+      { "u_message": "時間の流れが戻りました。", "type": "bad" }
+    ]
+  },
+  {
+    "id": "EOC_START_SPEEDUP_WEEK",
+    "type": "effect_on_condition",
+    "condition": {
+      "not": {
+        "u_has_any_trait" : [
+          "SD_SPEEDUP_DAY",
+          "SD_SPEEDUP_WEEK",
+          "SD_SPEEDUP_MONTH",
+          "SD_SPEEDUP_YEAR"
+        ]
+      }
+    },
+    "effect": [
+      { 
+        "arithmetic": [
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "=",
+          { "const": 420 }
+        ]
+      },
+      { "u_add_trait" : "SD_SPEEDUP_WEEK" },
+      { "u_message": "時を加速します(一週)。", "type": "good" }
+    ]
+  },
+  {
+    "id": "EOC_CHECK_SPEEDUP_WEEK",
+    "type": "effect_on_condition",
+    "recurrence": "1 minutes",
+    "condition": { "u_has_trait": "SD_SPEEDUP_WEEK" },
+    "deactivate_condition": {
+      "not": { "u_has_trait" : "SD_SPEEDUP_WEEK" }
+    },
+    "effect": [
+      { 
+        "run_eocs": [
+          {
+            "id": "EOC_CHECK_END_SPEEDUP_WEEK",
+            "condition": {
+              "compare_int": [
+                { "global_val": "var", "var_name": "count_time_minutes" },
+                "<=",
+                { "const": 0 }
+              ]
+            },
+            "effect": {
+              "run_eocs": [ "EOC_END_SPEEDUP_WEEK" ]
+            }
+          }
+        ]
+      },
+      { 
+        "arithmetic": [
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "-=",
+          { "const": 1 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EOC_END_SPEEDUP_WEEK",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "arithmetic": [
+          { "global_val": "var", "var_name": "mih_add_time" },
+          "=",
+          { "time": "604800 turns" }
+        ]
+      },
+      { "run_eocs": [ "EOC_FIX_TIME" ] },
+      { "u_lose_trait" : "SD_SPEEDUP_WEEK" },
+      { "u_message": "時間の流れが戻りました。", "type": "bad" }
+    ]
+  },
+  {
+    "id": "EOC_START_SPEEDUP_MONTH",
+    "type": "effect_on_condition",
+    "condition": {
+      "not": {
+        "u_has_any_trait" : [
+          "SD_SPEEDUP_DAY",
+          "SD_SPEEDUP_WEEK",
+          "SD_SPEEDUP_MONTH",
+          "SD_SPEEDUP_YEAR"
+        ]
+      }
+    },
+    "effect": [
+      { 
+        "arithmetic": [
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "=",
+          { "const": 960 }
+        ]
+      },
+      { "u_add_trait" : "SD_SPEEDUP_MONTH" },
+      { "u_message": "時を加速します(一月)。", "type": "good" }
+    ]
+  },
+  {
+    "id": "EOC_CHECK_SPEEDUP_MONTH",
+    "type": "effect_on_condition",
+    "recurrence": "1 minutes",
+    "condition": { "u_has_trait": "SD_SPEEDUP_MONTH" },
+    "deactivate_condition": {
+      "not": { "u_has_trait" : "SD_SPEEDUP_MONTH" }
+    },
+    "effect": [
+      { 
+        "run_eocs": [
+          {
+            "id": "EOC_CHECK_END_SPEEDUP_MONTH",
+            "condition": {
+              "compare_int": [
+                { "global_val": "var", "var_name": "count_time_minutes" },
+                "<=",
+                { "const": 0 }
+              ]
+            },
+            "effect": {
+              "run_eocs": [ "EOC_END_SPEEDUP_MONTH" ]
+            }
+          }
+        ]
+      },
+      { 
+        "arithmetic": [
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "-=",
+          { "const": 1 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EOC_END_SPEEDUP_MONTH",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "arithmetic": [
+          { "global_val": "var", "var_name": "mih_add_time" },
+          "=",
+          { "time": "2592000 turns" }
+        ]
+      },
+      { "run_eocs": [ "EOC_FIX_TIME" ] },
+      { "u_lose_trait" : "SD_SPEEDUP_MONTH" },
+      { "u_message": "時間の流れが戻りました。", "type": "bad" }
+    ]
+  },
+  {
+    "id": "EOC_START_SPEEDUP_YEAR",
+    "type": "effect_on_condition",
+    "condition": {
+      "not": {
+        "u_has_any_trait" : [
+          "SD_SPEEDUP_DAY",
+          "SD_SPEEDUP_WEEK",
+          "SD_SPEEDUP_MONTH",
+          "SD_SPEEDUP_YEAR"
+        ]
+      }
+    },
+    "effect": [
+      { 
+        "arithmetic": [
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "=",
+          { "const": 10080 }
+        ]
+      },
+      { "u_add_trait" : "SD_SPEEDUP_YEAR" },
+      { "u_message": "時を加速します(一年)。", "type": "good" }
+    ]
+  },
+  {
+    "id": "EOC_CHECK_SPEEDUP_YEAR",
+    "type": "effect_on_condition",
+    "recurrence": "1 minutes",
+    "condition": { "u_has_trait": "SD_SPEEDUP_YEAR" },
+    "deactivate_condition": {
+      "not": { "u_has_trait" : "SD_SPEEDUP_YEAR" }
+    },
+    "effect": [
+      { 
+        "run_eocs": [
+          {
+            "id": "EOC_CHECK_END_SPEEDUP_YEAR",
+            "condition": {
+              "compare_int": [
+                { "global_val": "var", "var_name": "count_time_minutes" },
+                "<=",
+                { "const": 0 }
+              ]
+            },
+            "effect": {
+              "run_eocs": [ "EOC_END_SPEEDUP_YEAR" ]
+            }
+          }
+        ]
+      },
+      { 
+        "arithmetic": [
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "-=",
+          { "const": 1 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EOC_END_SPEEDUP_YEAR",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "arithmetic": [
+          { "global_val": "var", "var_name": "mih_add_time" },
+          "=",
+          { "time": "31536000 turns" }
+        ]
+      },
+      { "run_eocs": [ "EOC_FIX_TIME" ] },
+      { "u_lose_trait" : "SD_SPEEDUP_YEAR" },
+      { "u_message": "時間の流れが戻りました。", "type": "bad" }
+    ]
+  },
+  {
+    "id": "EOC_FIX_TIME",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "arithmetic": [
+          { "global_val": "var",
+            "var_name": "tmp_time_since_cataclysm"
+          },
+          "=",
+          { "time_since_cataclysm": "turns" }
+        ]
+      },
+      {
+        "arithmetic": [
+          { "time_since_cataclysm": "turns" },
+          "+=",
+          { "const": 0 }
+        ]
+      },
+      {
+        "arithmetic": [
+          { "global_val": "var",
+            "var_name": "option_initial_day"
+          },
+          "=",
+          { "arithmetic": [
+            { "global_val": "var",
+              "var_name": "tmp_time_since_cataclysm"
+            },
+            "-",
+            { "time_since_cataclysm": "turns" }
+            ]
+          }
+        ]
+      },
+      {
+        "arithmetic": [
+          { "global_val": "var",
+            "var_name": "option_initial_day"
+          },
+          "*=",
+          { "const": 2 }
+        ]
+      },
+      {
+        "arithmetic": [
+          { "time_since_cataclysm": "turns" },
+          "+=",
+          { "arithmetic": [
+              { "global_val": "var",
+                "var_name": "option_initial_day"
+              },
+              "+",
+              {
+                "global_val": "var",
+                "var_name": "mih_add_time"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EOC_SHOW_LIMIT_TIME",
+    "type": "effect_on_condition",
+    "condition": {
+      "not": {
+        "u_has_any_trait" : [
+          "SD_SPEEDUP_DAY",
+          "SD_SPEEDUP_WEEK",
+          "SD_SPEEDUP_MONTH",
+          "SD_SPEEDUP_YEAR"
+        ]
+      }
+    },
+    "effect": { "u_message": "このメッセージが表示された場合は、バグが発生しています。" },
+    "false_effect": [
+      { "arithmetic": [
+          { "u_val": "var", "var_name": "tmp_limit_time_day" },
+          "=",
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "/",
+          { "const": 1440 }
+          ]
+      },
+      { "arithmetic": [
+          { "u_val": "var", "var_name": "tmp_limit_time_hour" },
+          "=",
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "%",
+          { "const": 1440 }
+        ]
+      },
+      { "arithmetic": [
+          { "u_val": "var", "var_name": "tmp_limit_time_hour" },
+          "/=",
+          { "const": 60 }
+        ]
+      },
+      { "arithmetic": [
+          { "u_val": "var", "var_name": "tmp_limit_time_minute" },
+          "=",
+          { "global_val": "var", "var_name": "count_time_minutes" },
+          "%",
+          { "const": 60 }
+        ]
+      },
+      { "u_message": "残り時間は<u_val:tmp_limit_time_day>日<u_val:tmp_limit_time_hour>時間<u_val:tmp_limit_time_minute>分です。" }
+    ]
+  }
+]

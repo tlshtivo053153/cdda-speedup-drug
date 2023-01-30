@@ -1,0 +1,155 @@
+[
+  {
+    "id": "SD_debug_start_speedup_day",
+    "type": "TOOL",
+    "looks_like": "holybook_kojiki",
+    "name": "時間加速(日)(デバッグ)",
+    "description": "使用すると時間加速(日)を引き起こします。",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "material": [
+      "paper"
+    ],
+    "symbol": "o",
+    "color": "light_gray",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "加速",
+      "effect_on_conditions": [
+        "EOC_START_SPEEDUP_DAY"
+      ]
+    }
+  },
+  {
+    "id": "SD_debug_start_speedup_week",
+    "type": "TOOL",
+    "looks_like": "holybook_kojiki",
+    "name": "時間加速(週)(デバッグ)",
+    "description": "使用すると時間加速(週)を引き起こします。",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "material": [
+      "paper"
+    ],
+    "symbol": "o",
+    "color": "light_gray",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "加速",
+      "effect_on_conditions": [
+        "EOC_START_SPEEDUP_WEEK"
+      ]
+    }
+  },
+  {
+    "id": "SD_debug_start_speedup_month",
+    "type": "TOOL",
+    "looks_like": "holybook_kojiki",
+    "name": "時間加速(月)(デバッグ)",
+    "description": "使用すると時間加速(月)を引き起こします。",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "material": [
+      "paper"
+    ],
+    "symbol": "o",
+    "color": "light_gray",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "加速",
+      "effect_on_conditions": [
+        "EOC_START_SPEEDUP_MONTH"
+      ]
+    }
+  },
+  {
+    "id": "SD_debug_start_speedup_year",
+    "type": "TOOL",
+    "looks_like": "holybook_kojiki",
+    "name": "時間加速(年)(デバッグ)",
+    "description": "使用すると時間加速(年)を引き起こします。",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "material": [
+      "paper"
+    ],
+    "symbol": "o",
+    "color": "light_gray",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "加速",
+      "effect_on_conditions": [
+        "EOC_START_SPEEDUP_YEAR"
+      ]
+    }
+  },
+  {
+    "abstract": "SD_abstract_speedup_drug",
+    "name": { "str": "speedup drug abstract" },
+    "description": "speedup drug abstract",
+    "use_action": { "type": "cast_spell", "spell_id": "potion_recover_mana", "no_fail": true, "level": 0 },
+    "type": "COMESTIBLE",
+    "weight": "265 g",
+    "quench": 1,
+    "calories": 0,
+    "volume": "250ml",
+    "charges": 1,
+    "fun": 0,
+    "symbol": "~",
+    "container": "flask_glass",
+    "color": "light_red",
+    "comestible_type": "DRINK",
+    "flags": [ "EATEN_COLD", "NO_AUTO_CONSUME", "NUTRIENT_OVERRIDE" ],
+    "phase": "liquid",
+    "price": 0,
+    "freezing_point": -20
+  },
+  {
+    "id": "SD_speedup_drug_day",
+    "copy-from": "SD_abstract_speedup_drug",
+    "name": { "str": "加速薬(日) [SD]" },
+    "description": "時間を加速する薬です。効果時間は1時間です。",
+    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_day", "no_fail": true, "level": 0 },
+    "type": "COMESTIBLE",
+    "fun": 10
+  },
+  {
+    "id": "SD_speedup_drug_week",
+    "copy-from": "SD_abstract_speedup_drug",
+    "name": { "str": "加速薬(週) [SD]" },
+    "description": "時間を加速する薬です。効果時間は7時間です。",
+    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_week", "no_fail": true, "level": 0 },
+    "type": "COMESTIBLE",
+    "fun": 100
+  },
+  {
+    "id": "SD_speedup_drug_month",
+    "copy-from": "SD_abstract_speedup_drug",
+    "name": { "str": "加速薬(月) [SD]" },
+    "description": "時間を加速する薬です。効果時間は16時間です。",
+    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_month", "no_fail": true, "level": 0 },
+    "type": "COMESTIBLE",
+    "fun": 500
+  },
+  {
+    "id": "SD_speedup_drug_year",
+    "copy-from": "SD_abstract_speedup_drug",
+    "name": { "str": "加速薬(年) [SD]" },
+    "description": "時間を加速する薬です。効果時間は1週間です。",
+    "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_year", "no_fail": true, "level": 0 },
+    "type": "COMESTIBLE",
+    "fun": 3000
+  },
+  {
+    "id": "SD_mega_calory",
+    "type": "AMMO",
+    "copy-from": "ash",
+    "name": "メガカロリー粉末 [SD]",
+    "description": "食べ物からエネルギーを抽出して粉末状にしたものです。加速薬の素材になります。",
+    "weight": 1,
+    "volume": 0,
+    "count": 10,
+    "stack_size": 100,
+    "flags": [ "TRADER_AVOID", "ZERO_WEIGHT", "UNBREAKABLE_MELEE" ]
+  }
+]

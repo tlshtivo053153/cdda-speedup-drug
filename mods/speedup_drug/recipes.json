@@ -1,0 +1,101 @@
+[
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "SD_mega_calory",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_DRUGS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "0 s",
+    "autolearn": true,
+    "components": [
+      [
+        [ "meat_smoked", 25 ],
+        [ "fish_smoked", 39 ],
+        [ "mollusk_smoked", 39 ],
+        [ "dry_meat", 25 ],
+        [ "dry_fish", 39 ],
+        [ "dry_mollusk", 39 ],
+        [ "jerky", 29 ],
+        [ "powder_eggs", 125 ],
+        [ "milk_powder", 76 ],
+        [ "protein_powder", 100 ],
+        [ "flour", 278 ],
+        [ "cornmeal", 228 ],
+        [ "soy_nuts", 72 ],
+        [ "dry_beans", 50 ],
+        [ "dry_corn", 100 ],
+        [ "dry_fruit", 100 ],
+        [ "sugar", 527 ],
+        [ "dandelion_wine", 205 ],
+        [ "rum", 127 ],
+        [ "fruit_wine", 205 ],
+        [ "moonshine", 100 ],
+        [ "sake_filtered", 228 ],
+        [ "cooking_oil", 720 ],
+        [ "cooking_oil2", 720 ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "SD_speedup_drug_day",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_DRUGS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "0 s",
+    "autolearn": true,
+    "components": [
+      [ [ "SD_mega_calory", 2 ] ],
+      [ [ "water_clean", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "SD_speedup_drug_week",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_DRUGS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "0 s",
+    "autolearn": true,
+    "components": [
+      [ [ "SD_mega_calory", 16 ] ],
+      [ [ "water_clean", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "SD_speedup_drug_month",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_DRUGS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "0 s",
+    "autolearn": true,
+    "components": [
+      [ [ "SD_mega_calory", 80 ] ],
+      [ [ "water_clean", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "SD_speedup_drug_year",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_DRUGS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "0 s",
+    "autolearn": true,
+    "components": [
+      [ [ "SD_mega_calory", 1000 ] ],
+      [ [ "water_clean", 1 ] ]
+    ]
+  }
+]
