@@ -1,5 +1,8 @@
 [
   {
+    "//1": "効果時間の終了時に時間を進める。",
+    "//2": "time_since_cataclysmに値を代入すると値がずれるので",
+    "//3": "トリッキーなことをしている。",
     "id": "EOC_FIX_TIME",
     "type": "effect_on_condition",
     "effect": [
@@ -13,6 +16,8 @@
         ]
       },
       {
+        "//1": "ここで値をずらして元の値との差分をとる。",
+        "//2": "オプションの大変動開始日の値が影響している。",
         "arithmetic": [
           { "time_since_cataclysm": "turns" },
           "+=",
@@ -36,6 +41,7 @@
         ]
       },
       {
+        "//": "値の代入時にまたずれるので値を2倍に。",
         "arithmetic": [
           { "global_val": "var",
             "var_name": "option_initial_day"
@@ -64,6 +70,8 @@
     ]
   },
   {
+    "//1": " '[' キーで変異メニューを出して特質を選択、",
+    "//2": "残り時間を表示する｡",
     "id": "EOC_SHOW_LIMIT_TIME",
     "type": "effect_on_condition",
     "condition": {
