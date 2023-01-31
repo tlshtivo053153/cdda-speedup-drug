@@ -5,7 +5,7 @@
     "name": "追加 - 加速薬",
     "authors": [ "tlshtivo053153" ],
     "description": "時間を加速させてクラフト時間などを短縮します。",
-    "category": "rebalance",
+    "category": "misc_additions",
     "dependencies": [ "dda" ]
   }
 ]
