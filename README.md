@@ -6,7 +6,7 @@ Cataclysm: Dark Days Ahead の開発版向けMOD。
 
 1. Githubのページにある `Code -> Download ZIP` からダウンロードする。
 2. `mods` フォルダを `data/mods` または `mods` にコピーする。
-3. 世界生成時のMODリストから `a` を選択。
+3. 世界生成時のMODリストから `[基本]->[様々な追加]->[追加 - 加速薬]` を選択。
 
 ## 概要
 加速薬というアイテムを追加する。
