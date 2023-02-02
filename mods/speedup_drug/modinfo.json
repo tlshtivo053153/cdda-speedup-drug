@@ -6,6 +6,7 @@
     "authors": [ "tlshtivo053153" ],
     "description": "時間を加速させてクラフト時間などを短縮します。",
     "category": "misc_additions",
-    "dependencies": [ "dda" ]
+    "dependencies": [ "dda" ],
+    "version": "0.1"
   }
 ]
