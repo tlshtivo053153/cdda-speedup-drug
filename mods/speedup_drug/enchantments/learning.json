@@ -11,24 +11,24 @@
     "type": "enchantment",
     "id": "SD_SPEEDUP_LEARN_WEEK_BUFF",
     "values": [
-      { "value": "LEARNING_FOCUS", "multiply": 15 },
-      { "value": "READING_EXP", "multiply": -0.9375 }
+      { "value": "LEARNING_FOCUS", "multiply": 111 },
+      { "value": "READING_EXP", "multiply": -0.991071 }
     ]
   },
   {
     "type": "enchantment",
     "id": "SD_SPEEDUP_LEARN_MONTH_BUFF",
     "values": [
-      { "value": "LEARNING_FOCUS", "multiply": 29 },
-      { "value": "READING_EXP", "multiply": -0.966666 }
+      { "value": "LEARNING_FOCUS", "multiply": 239 },
+      { "value": "READING_EXP", "multiply": -0.995833 }
     ]
   },
   {
     "type": "enchantment",
     "id": "SD_SPEEDUP_LEARN_YEAR_BUFF",
     "values": [
-      { "value": "LEARNING_FOCUS", "multiply": 51.142857 },
-      { "value": "READING_EXP", "multiply": -0.980822 }
+      { "value": "LEARNING_FOCUS", "multiply": 729 },
+      { "value": "READING_EXP", "multiply": -0.998630 }
     ]
   }
 ]

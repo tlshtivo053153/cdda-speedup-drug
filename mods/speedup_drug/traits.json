@@ -17,7 +17,7 @@
     "activated_eocs": [ "EOC_SHOW_LIMIT_TIME" ]
   },
   {
-    "//1": "効果時間: 7時間",
+    "//1": "効果時間: 1時間",
     "//2": "効果終了後7日経過",
     "type": "mutation",
     "id": "SD_SPEEDUP_CRAFT_WEEK",
@@ -28,13 +28,13 @@
     "purifiable": false,
     "player_display": true,
     "active": true,
-    "crafting_speed_multiplier": 16,
-    "reading_speed_multiplier": 0.0625,
+    "crafting_speed_multiplier": 112,
+    "reading_speed_multiplier": 0.008929,
     "enchantments": [ "SD_SPEEDUP_CRAFT_WEEK_BUFF" ],
     "activated_eocs": [ "EOC_SHOW_LIMIT_TIME" ]
   },
   {
-    "//1": "効果時間: 16時間",
+    "//1": "効果時間: 2時間",
     "//2": "効果終了後30日経過",
     "type": "mutation",
     "id": "SD_SPEEDUP_CRAFT_MONTH",
@@ -45,13 +45,13 @@
     "purifiable": false,
     "player_display": true,
     "active": true,
-    "crafting_speed_multiplier": 30,
-    "reading_speed_multiplier": 0.033333,
+    "crafting_speed_multiplier": 240,
+    "reading_speed_multiplier": 0.004167,
     "enchantments": [ "SD_SPEEDUP_CRAFT_MONTH_BUFF" ],
     "activated_eocs": [ "EOC_SHOW_LIMIT_TIME" ]
   },
   {
-    "//1": "効果時間: 1週間",
+    "//1": "効果時間: 8時間",
     "//2": "効果終了後365日経過",
     "type": "mutation",
     "id": "SD_SPEEDUP_CRAFT_YEAR",
@@ -62,8 +62,8 @@
     "purifiable": false,
     "player_display": true,
     "active": true,
-    "crafting_speed_multiplier": 52.142857,
-    "reading_speed_multiplier": 0.019178,
+    "crafting_speed_multiplier": 730,
+    "reading_speed_multiplier": 0.001370,
     "enchantments": [ "SD_SPEEDUP_CRAFT_YEAR_BUFF" ],
     "activated_eocs": [ "EOC_SHOW_LIMIT_TIME" ]
   },
@@ -84,7 +84,7 @@
     "activated_eocs": [ "EOC_SHOW_LIMIT_TIME" ]
   },
   {
-    "//1": "効果時間: 7時間",
+    "//1": "効果時間: 1時間",
     "//2": "効果終了後7日経過",
     "type": "mutation",
     "id": "SD_SPEEDUP_LEARN_WEEK",
@@ -95,12 +95,12 @@
     "purifiable": false,
     "player_display": true,
     "active": true,
-    "reading_speed_multiplier": 0.0625,
+    "reading_speed_multiplier": 0.008929,
     "enchantments": [ "SD_SPEEDUP_LEARN_WEEK_BUFF" ],
     "activated_eocs": [ "EOC_SHOW_LIMIT_TIME" ]
   },
   {
-    "//1": "効果時間: 16時間",
+    "//1": "効果時間: 2時間",
     "//2": "効果終了後30日経過",
     "type": "mutation",
     "id": "SD_SPEEDUP_LEARN_MONTH",
@@ -111,12 +111,12 @@
     "purifiable": false,
     "player_display": true,
     "active": true,
-    "reading_speed_multiplier": 0.033333,
+    "reading_speed_multiplier": 0.004167,
     "enchantments": [ "SD_SPEEDUP_LEARN_MONTH_BUFF" ],
     "activated_eocs": [ "EOC_SHOW_LIMIT_TIME" ]
   },
   {
-    "//1": "効果時間: 1週間",
+    "//1": "効果時間: 2時間",
     "//2": "効果終了後365日経過",
     "type": "mutation",
     "id": "SD_SPEEDUP_LEARN_YEAR",
@@ -127,7 +127,7 @@
     "purifiable": false,
     "player_display": true,
     "active": true,
-    "reading_speed_multiplier": 0.019178,
+    "reading_speed_multiplier": 0.001370,
     "enchantments": [ "SD_SPEEDUP_LEARN_YEAR_BUFF" ],
     "activated_eocs": [ "EOC_SHOW_LIMIT_TIME" ]
   }

@@ -75,10 +75,9 @@
     "effect": { "u_message": "このメッセージが表示された場合は、バグが発生しています。" },
     "false_effect": [
       { "math": [ "tmp_remain_minutes", "=", "u_count_time_minutes - u_sd_counter" ] },
-      { "math": [ "tmp_limit_time_day", "=", "floor(tmp_remain_minutes / 1440)" ] },
-      { "math": [ "tmp_limit_time_hour", "=", "floor((tmp_remain_minutes % 1440) / 60)" ] },
+      { "math": [ "tmp_limit_time_hour", "=", "floor(tmp_remain_minutes / 60)" ] },
       { "math": [ "tmp_limit_time_minute", "=", "tmp_remain_minutes % 60" ] },
-      { "u_message": "残り時間は<global_val:tmp_limit_time_day>日<global_val:tmp_limit_time_hour>時間<global_val:tmp_limit_time_minute>分です。" }
+      { "u_message": "残り時間は<global_val:tmp_limit_time_hour>時間<global_val:tmp_limit_time_minute>分です。" }
     ]
   },
   {

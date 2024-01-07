@@ -45,7 +45,7 @@
     "id": "SD_speedup_drug_craft_week",
     "copy-from": "SD_abstract_speedup_drug",
     "name": { "str": "クラフト加速薬(週) [SD]" },
-    "description": "クラフト時間を加速する薬です。効果時間は7時間です。",
+    "description": "クラフト時間を加速する薬です。効果時間は1時間です。",
     "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_craft_week", "no_fail": true, "level": 0 },
     "type": "COMESTIBLE",
     "fun": 100
@@ -54,7 +54,7 @@
     "id": "SD_speedup_drug_craft_month",
     "copy-from": "SD_abstract_speedup_drug",
     "name": { "str": "クラフト加速薬(月) [SD]" },
-    "description": "クラフト時間を加速する薬です。効果時間は16時間です。",
+    "description": "クラフト時間を加速する薬です。効果時間は2時間です。",
     "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_craft_month", "no_fail": true, "level": 0 },
     "type": "COMESTIBLE",
     "fun": 500
@@ -63,7 +63,7 @@
     "id": "SD_speedup_drug_craft_year",
     "copy-from": "SD_abstract_speedup_drug",
     "name": { "str": "クラフト加速薬(年) [SD]" },
-    "description": "クラフト時間を加速する薬です。効果時間は1週間です。",
+    "description": "クラフト時間を加速する薬です。効果時間は8時間です。",
     "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_craft_year", "no_fail": true, "level": 0 },
     "type": "COMESTIBLE",
     "fun": 3000
@@ -81,7 +81,7 @@
     "id": "SD_speedup_drug_learn_week",
     "copy-from": "SD_abstract_speedup_drug",
     "name": { "str": "学習加速薬(週) [SD]" },
-    "description": "学習時間を加速する薬です。効果時間は7時間です。",
+    "description": "学習時間を加速する薬です。効果時間は1時間です。",
     "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_learn_week", "no_fail": true, "level": 0 },
     "type": "COMESTIBLE",
     "fun": 100
@@ -90,7 +90,7 @@
     "id": "SD_speedup_drug_learn_month",
     "copy-from": "SD_abstract_speedup_drug",
     "name": { "str": "学習加速薬(月) [SD]" },
-    "description": "学習時間を加速する薬です。効果時間は16時間です。",
+    "description": "学習時間を加速する薬です。効果時間は2時間です。",
     "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_learn_month", "no_fail": true, "level": 0 },
     "type": "COMESTIBLE",
     "fun": 500
@@ -99,7 +99,7 @@
     "id": "SD_speedup_drug_learn_year",
     "copy-from": "SD_abstract_speedup_drug",
     "name": { "str": "学習加速薬(年) [SD]" },
-    "description": "学習時間を加速する薬です。効果時間は1週間です。",
+    "description": "学習時間を加速する薬です。効果時間は8時間です。",
     "use_action": { "type": "cast_spell", "spell_id": "spell_start_speedup_learn_year", "no_fail": true, "level": 0 },
     "type": "COMESTIBLE",
     "fun": 3000
