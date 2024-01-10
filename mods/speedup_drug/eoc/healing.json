@@ -1,0 +1,88 @@
+[
+  {
+    "id": "EOC_SPEEDUP_HEALING_1",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_add_turns_compensation", "=", "86400" ] },
+      { "u_message": "時を加速して怪我を治します(一日)。", "type": "good" },
+      { "u_cast_spell": { "id": "spell_speedup_healing_1" } },
+      { "run_eocs": [ "EOC_SPEEDUP_HEALING_EXTRA_1" ] },
+      { "u_add_trait" : "SD_SPEEDUP_HEALING" },
+      { "u_add_effect": "sleep", "duration": "5 minutes" }
+    ]
+  },
+  {
+    "id": "EOC_SPEEDUP_HEALING_2",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_add_turns_compensation", "=", "86400 * 7" ] },
+      { "u_message": "時を加速して怪我を治します(一週)。", "type": "good" },
+      { "u_cast_spell": { "id": "spell_speedup_healing_2" } },
+      { "run_eocs": [ "EOC_SPEEDUP_HEALING_EXTRA_2" ] },
+      { "u_set_hp": 1, "only_increase": true },
+      { "u_add_trait" : "SD_SPEEDUP_HEALING" },
+      { "u_add_effect": "sleep", "duration": "5 minutes" }
+    ]
+  },
+  {
+    "id": "EOC_SPEEDUP_HEALING_3",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_add_turns_compensation", "=", "86400 * 30" ] },
+      { "u_message": "時を加速して怪我を治します(一月)。", "type": "good" },
+      { "u_cast_spell": { "id": "spell_speedup_healing_3" } },
+      { "run_eocs": [ "EOC_SPEEDUP_HEALING_EXTRA_3" ] },
+      { "u_set_hp": 1000, "only_increase": true },
+      { "u_add_trait" : "SD_SPEEDUP_HEALING" },
+      { "u_add_effect": "sleep", "duration": "5 minutes" }
+    ]
+  },
+  {
+    "id": "EOC_SPEEDUP_HEALING_EXTRA_1",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_pain()", "*=", "0.01" ] },
+      { "math": [ "u_val('sleep_deprivation')", "-=", "2000" ] },
+      { "u_lose_effect": "deaf" },
+      { "u_lose_effect": "drunk" }
+    ]
+  },
+  {
+    "id": "EOC_SPEEDUP_HEALING_EXTRA_2",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_pain()", "=", "0" ] },
+      { "math": [ "u_val('vitamin', 'name: mutant_toxin')", "-=", "600" ] },
+      { "math": [ "u_val('rad')", "-=", "100" ] },
+      { "math": [ "u_val('sleep_deprivation')", "-=", "14000" ] },
+      { "u_lose_effect": "common_cold" },
+      { "u_lose_effect": "deaf" },
+      { "u_lose_effect": "drunk" }
+    ]
+  },
+  {
+    "id": "EOC_SPEEDUP_HEALING_EXTRA_3",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_pain()", "=", "0" ] },
+      { "math": [ "u_val('vitamin', 'name: mutant_toxin')", "-=", "3000" ] },
+      { "math": [ "u_val('rad')", "-=", "500" ] },
+      { "math": [ "u_val('sleep_deprivation')", "-=", "60000" ] },
+      { "u_lose_effect": "common_cold" },
+      { "u_lose_effect": "flu" },
+      { "u_lose_effect": "deaf" },
+      { "u_lose_effect": "drunk" }
+    ]
+  },
+  {
+    "id": "EOC_SPEEDUP_HEALING_WAKEUP",
+    "type": "effect_on_condition",
+    "eoc_type": "EVENT",
+    "required_event": "character_wakes_up",
+    "condition": { "u_has_trait": "SD_SPEEDUP_HEALING" },
+    "effect": [
+      { "u_lose_trait": "SD_SPEEDUP_HEALING" },
+      { "run_eocs": [ "EOC_FIX_TIME" ] }
+    ]
+  }
+]

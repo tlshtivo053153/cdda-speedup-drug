@@ -1,90 +1,44 @@
 [
   {
-    "id": "spell_start_speedup_craft_day",
+    "id": "spell_speedup_healing_1",
     "type": "SPELL",
-    "name": "クラフト時間加速(日)",
-    "description": "クラフト時間を加速します。効果時間は1時間です。",
-    "effect": "effect_on_condition",
-    "effect_str": "EOC_START_SPEEDUP_CRAFT_DAY",
+    "name": "回復(弱)",
+    "description": "回復(弱)",
+    "effect": "attack",
     "shape": "blast",
     "valid_targets": [ "self" ],
-    "flags": [ "NO_LEGS", "SILENT" ]
+    "flags": [ "NO_LEGS", "SILENT" ],
+    "min_damage": -20,
+    "max_damage": -20,
+    "min_range": 1,
+    "max_range": 1
   },
   {
-    "id": "spell_start_speedup_craft_week",
+    "id": "spell_speedup_healing_2",
     "type": "SPELL",
-    "name": "クラフト時間加速(週)",
-    "description": "クラフト時間を加速します。効果時間は1時間です。",
-    "effect": "effect_on_condition",
-    "effect_str": "EOC_START_SPEEDUP_CRAFT_WEEK",
+    "name": "回復(中)",
+    "description": "回復(中)",
+    "effect": "attack",
     "shape": "blast",
     "valid_targets": [ "self" ],
-    "flags": [ "NO_LEGS", "SILENT" ]
+    "flags": [ "NO_LEGS", "SILENT" ],
+    "min_damage": -150,
+    "max_damage": -150,
+    "min_range": 1,
+    "max_range": 1
   },
   {
-    "id": "spell_start_speedup_craft_month",
+    "id": "spell_speedup_healing_3",
     "type": "SPELL",
-    "name": "クラフト時間加速(月)",
-    "description": "クラフト時間を加速します。効果時間は2時間です。",
-    "effect": "effect_on_condition",
-    "effect_str": "EOC_START_SPEEDUP_CRAFT_MONTH",
+    "name": "回復(強)",
+    "description": "回復(強)",
+    "effect": "attack",
     "shape": "blast",
     "valid_targets": [ "self" ],
-    "flags": [ "NO_LEGS", "SILENT" ]
-  },
-  {
-    "id": "spell_start_speedup_craft_year",
-    "type": "SPELL",
-    "name": "クラフト時間加速(年)",
-    "description": "クラフト時間を加速します。効果時間は8時間です。",
-    "effect": "effect_on_condition",
-    "effect_str": "EOC_START_SPEEDUP_CRAFT_YEAR",
-    "shape": "blast",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_LEGS", "SILENT" ]
-  },
-  {
-    "id": "spell_start_speedup_learn_day",
-    "type": "SPELL",
-    "name": "学習時間加速(日)",
-    "description": "学習時間を加速します。効果時間は1時間です。",
-    "effect": "effect_on_condition",
-    "effect_str": "EOC_START_SPEEDUP_LEARN_DAY",
-    "shape": "blast",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_LEGS", "SILENT" ]
-  },
-  {
-    "id": "spell_start_speedup_learn_week",
-    "type": "SPELL",
-    "name": "学習時間加速(週)",
-    "description": "学習時間を加速します。効果時間は1時間です。",
-    "effect": "effect_on_condition",
-    "effect_str": "EOC_START_SPEEDUP_LEARN_WEEK",
-    "shape": "blast",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_LEGS", "SILENT" ]
-  },
-  {
-    "id": "spell_start_speedup_learn_month",
-    "type": "SPELL",
-    "name": "学習時間加速(月)",
-    "description": "学習時間を加速します。効果時間は2時間です。",
-    "effect": "effect_on_condition",
-    "effect_str": "EOC_START_SPEEDUP_LEARN_MONTH",
-    "shape": "blast",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_LEGS", "SILENT" ]
-  },
-  {
-    "id": "spell_start_speedup_learn_year",
-    "type": "SPELL",
-    "name": "学習時間加速(年)",
-    "description": "学習時間を加速します。効果時間は8時間です。",
-    "effect": "effect_on_condition",
-    "effect_str": "EOC_START_SPEEDUP_LEARN_YEAR",
-    "shape": "blast",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_LEGS", "SILENT" ]
+    "flags": [ "NO_LEGS", "SILENT" ],
+    "min_damage": -1000,
+    "max_damage": -1000,
+    "min_range": 1,
+    "max_range": 1
   }
 ]

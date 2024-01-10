@@ -130,5 +130,16 @@
     "reading_speed_multiplier": 0.001370,
     "enchantments": [ "SD_SPEEDUP_LEARN_YEAR_BUFF" ],
     "activated_eocs": [ "EOC_SHOW_LIMIT_TIME" ]
+  },
+  {
+    "type": "mutation",
+    "id": "SD_SPEEDUP_HEALING",
+    "name": "回復加速",
+    "points": 8,
+    "description": "疲労を回復",
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "fatigue_regen_modifier": 1000
   }
 ]
