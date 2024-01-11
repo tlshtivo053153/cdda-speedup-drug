@@ -4,7 +4,7 @@ Cataclysm: Dark Days Ahead の開発版向けMOD。
 
 ## インストール
 
-1. Githubのページにある `Code -> Download ZIP` からダウンロードする。
+1. Githubのページにある [tags](https://github.com/tlshtivo053153/cdda-speedup-drug/tags) からダウンロードする。
 2. `mods` フォルダを `data/mods` または `mods` にコピーする。
 3. 世界生成時のMODリストから `[基本]->[様々な追加]->[追加 - 加速薬]` を選択。
 
