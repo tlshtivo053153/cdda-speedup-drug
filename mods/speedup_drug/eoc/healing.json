@@ -19,7 +19,10 @@
       { "u_message": "時を加速して怪我を治します(一週)。", "type": "good" },
       { "u_cast_spell": { "id": "spell_speedup_healing_2" } },
       { "run_eocs": [ "EOC_SPEEDUP_HEALING_EXTRA_2" ] },
-      { "u_set_hp": 1, "only_increase": true },
+      { "math": [ "u_hp('arm_l')", "=", "max( u_hp('arm_l'), 1)" ] },
+      { "math": [ "u_hp('arm_r')", "=", "max( u_hp('arm_r'), 1)" ] },
+      { "math": [ "u_hp('leg_l')", "=", "max( u_hp('leg_l'), 1)" ] },
+      { "math": [ "u_hp('leg_r')", "=", "max( u_hp('leg_r'), 1)" ] },
       { "u_add_trait" : "SD_SPEEDUP_HEALING" },
       { "u_add_effect": "sleep", "duration": "5 minutes" }
     ]
@@ -32,7 +35,10 @@
       { "u_message": "時を加速して怪我を治します(一月)。", "type": "good" },
       { "u_cast_spell": { "id": "spell_speedup_healing_3" } },
       { "run_eocs": [ "EOC_SPEEDUP_HEALING_EXTRA_3" ] },
-      { "u_set_hp": 1000, "only_increase": true },
+      { "math": [ "u_hp('arm_l')", "=", "max( u_hp('arm_l'), 1000)" ] },
+      { "math": [ "u_hp('arm_r')", "=", "max( u_hp('arm_r'), 1000)" ] },
+      { "math": [ "u_hp('leg_l')", "=", "max( u_hp('leg_l'), 1000)" ] },
+      { "math": [ "u_hp('leg_r')", "=", "max( u_hp('leg_r'), 1000)" ] },
       { "u_add_trait" : "SD_SPEEDUP_HEALING" },
       { "u_add_effect": "sleep", "duration": "5 minutes" }
     ]
