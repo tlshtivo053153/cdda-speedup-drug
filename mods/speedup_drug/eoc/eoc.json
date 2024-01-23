@@ -6,51 +6,18 @@
     "id": "EOC_FIX_TIME",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "arithmetic": [
-          { "global_val": "var",
-            "var_name": "tmp_time_since_cataclysm"
-          },
-          "=",
-          { "time_since_cataclysm": "turns" }
-        ]
-      },
+      { "math": [ "_tsc", "=", "u_val('time_since_cataclysm: turns')" ] },
       {
         "//1": "ここで値をずらして元の値との差分をとる。",
-        "//2": "オプションの大変動開始日の値が影響している。",
-        "arithmetic": [
-          { "time_since_cataclysm": "turns" },
-          "+=",
-          { "const": 0 }
-        ]
+        "//2": "ゲーム開始時の大変動開始日の値が影響している。",
+        "math": [ "u_val('time_since_cataclysm: turns')", "+=", "0" ]
       },
-      {
-        "arithmetic": [
-          { "global_val": "var",
-            "var_name": "option_initial_day"
-          },
-          "=",
-          { "arithmetic": [
-            { "global_val": "var",
-              "var_name": "tmp_time_since_cataclysm"
-            },
-            "-",
-            { "time_since_cataclysm": "turns" }
-            ]
-          }
-        ]
-      },
+      { "math": [ "_diff", "=", "_tsc - u_val('time_since_cataclysm: turns')" ] },
       {
         "//": "値の代入時にまたずれるので値を2倍に。",
-        "math": [ "option_initial_day", "*=", "2" ]
+        "math": [ "_diff", "*=", "2" ]
       },
-      {
-        "arithmetic": [
-          { "time_since_cataclysm": "turns" },
-          "+=",
-          { "math": ["option_initial_day + u_add_turns_compensation"] }
-        ]
-      }
+      { "math": [ "u_val('time_since_cataclysm: turns')", "+=", "_diff + u_add_turns_compensation" ] }
     ]
   },
   {
