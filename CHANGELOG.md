@@ -1,5 +1,10 @@
 # 加速薬MOD 変更点
 
+## [0.3] - 2024-01-23
+- u_set_hpが廃止になったのでmathで置き換え
+- 学習加速薬(年)の記述ミスの訂正
+- 加速薬の効果時間が1分長かったので修正
+
 ## [0.2] - 2024-01-11
 - 0.G開発版向けに記述の変更
 - メガカロリー粉末の製作に利用できる素材を追加
@@ -13,3 +18,4 @@
 Initial Release
 
 [0.2]: https://github.com/tlshtivo053153/cdda-speedup-drug/compare/v0.1...v0.2
+[0.3]: https://github.com/tlshtivo053153/cdda-speedup-drug/compare/v0.2...v0.3
