@@ -74,7 +74,7 @@
   {
     "id": "EOC_CHECK_END_SPEEDUP",
     "type": "effect_on_condition",
-    "condition": { "math": [ "u_sd_counter <= u_count_time_minutes" ] },
+    "condition": { "math": [ "u_sd_counter < u_count_time_minutes" ] },
     "effect": { "math": [ "u_sd_counter", "++" ] },
     "false_effect": {
       "run_eocs": [ "EOC_END_SPEEDUP" ]
