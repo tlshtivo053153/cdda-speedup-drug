@@ -17,7 +17,7 @@
         "//": "値の代入時にまたずれるので値を2倍に。",
         "math": [ "_diff", "*=", "2" ]
       },
-      { "math": [ "u_val('time_since_cataclysm: turns')", "+=", "_diff + u_add_turns_compensation" ] }
+      { "math": [ "u_val('time_since_cataclysm: turns')", "+=", "_diff + v_compensation" ] }
     ]
   },
   {
@@ -84,7 +84,12 @@
     "id": "EOC_END_SPEEDUP",
     "type": "effect_on_condition",
     "effect": [
-      { "run_eocs": [ "EOC_FIX_TIME" ] },
+      {
+        "run_eoc_with": "EOC_FIX_TIME",
+        "variables": {
+          "compensation": "u_add_turns_compensation"
+        }
+      },
       { "run_eocs": [ "EOC_LOSE_SPEEDUP_TRAIT" ] },
       { "u_message": "時間の流れが戻りました。", "type": "bad" },
       { "math": [ "u_is_being_speedup", "=", "0" ] }

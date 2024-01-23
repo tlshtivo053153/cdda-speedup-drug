@@ -88,10 +88,12 @@
     "condition": { "u_has_trait": "SD_SPEEDUP_HEALING" },
     "effect": [
       { "u_lose_trait": "SD_SPEEDUP_HEALING" },
-      { "math": [ "tmp_add_turns_compensation", "=", "u_add_turns_compensation" ] },
-      { "math": [ "u_add_turns_compensation", "=", "u_add_turns_compensation_healing" ] },
-      { "run_eocs": [ "EOC_FIX_TIME" ] },
-      { "math": [ "u_add_turns_compensation", "=", "tmp_add_turns_compensation" ] }
+      {
+        "run_eoc_with": "EOC_FIX_TIME",
+        "variables": {
+          "compensation": "u_add_turns_compensation_healing"
+        }
+      }
     ]
   }
 ]
