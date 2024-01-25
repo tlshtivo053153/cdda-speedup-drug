@@ -7,7 +7,7 @@
       { "math": [ "u_is_being_speedup", "=", "1" ] },
       { "math": [ "u_sd_counter", "=", "0" ] },
       { "math": [ "u_count_time_minutes", "=", "60" ] },
-      { "math": [ "u_add_turns_compensation", "=", "86400" ] },
+      { "math": [ "u_add_turns_compensation", "=", "time('1d')" ] },
       { "u_add_trait" : "SD_SPEEDUP_CRAFT_DAY" },
       { "u_message": "時を加速します(一日)。", "type": "good" }
     ]
@@ -20,7 +20,7 @@
       { "math": [ "u_is_being_speedup", "=", "1" ] },
       { "math": [ "u_sd_counter", "=", "0" ] },
       { "math": [ "u_count_time_minutes", "=", "60" ] },
-      { "math": [ "u_add_turns_compensation", "=", "86400 * 7" ] },
+      { "math": [ "u_add_turns_compensation", "=", "time('7d')" ] },
       { "u_add_trait" : "SD_SPEEDUP_CRAFT_WEEK" },
       { "u_message": "時を加速します(一週)。", "type": "good" }
     ]
@@ -33,7 +33,7 @@
       { "math": [ "u_is_being_speedup", "=", "1" ] },
       { "math": [ "u_sd_counter", "=", "0" ] },
       { "math": [ "u_count_time_minutes", "=", "60 * 2" ] },
-      { "math": [ "u_add_turns_compensation", "=", "86400 * 30" ] },
+      { "math": [ "u_add_turns_compensation", "=", "time('30d')" ] },
       { "u_add_trait" : "SD_SPEEDUP_CRAFT_MONTH" },
       { "u_message": "時を加速します(一月)。", "type": "good" }
     ]
@@ -46,7 +46,7 @@
       { "math": [ "u_is_being_speedup", "=", "1" ] },
       { "math": [ "u_sd_counter", "=", "0" ] },
       { "math": [ "u_count_time_minutes", "=", "60 * 8" ] },
-      { "math": [ "u_add_turns_compensation", "=", "86400 * 365" ] },
+      { "math": [ "u_add_turns_compensation", "=", "time('365d')" ] },
       { "u_add_trait" : "SD_SPEEDUP_CRAFT_YEAR" },
       { "u_message": "時を加速します(一年)。", "type": "good" }
     ]

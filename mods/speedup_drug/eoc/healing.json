@@ -3,7 +3,7 @@
     "id": "EOC_SPEEDUP_HEALING_1",
     "type": "effect_on_condition",
     "effect": [
-      { "math": [ "u_add_turns_compensation_healing", "=", "86400" ] },
+      { "math": [ "u_add_turns_compensation_healing", "=", "time('1d')" ] },
       { "u_message": "時を加速して怪我を治します(一日)。", "type": "good" },
       { "u_cast_spell": { "id": "spell_speedup_healing_1" } },
       { "run_eocs": [ "EOC_SPEEDUP_HEALING_EXTRA_1" ] },
@@ -15,7 +15,7 @@
     "id": "EOC_SPEEDUP_HEALING_2",
     "type": "effect_on_condition",
     "effect": [
-      { "math": [ "u_add_turns_compensation_healing", "=", "86400 * 7" ] },
+      { "math": [ "u_add_turns_compensation_healing", "=", "time('7d')" ] },
       { "u_message": "時を加速して怪我を治します(一週)。", "type": "good" },
       { "u_cast_spell": { "id": "spell_speedup_healing_2" } },
       { "run_eocs": [ "EOC_SPEEDUP_HEALING_EXTRA_2" ] },
@@ -31,7 +31,7 @@
     "id": "EOC_SPEEDUP_HEALING_3",
     "type": "effect_on_condition",
     "effect": [
-      { "math": [ "u_add_turns_compensation_healing", "=", "86400 * 30" ] },
+      { "math": [ "u_add_turns_compensation_healing", "=", "time('30d')" ] },
       { "u_message": "時を加速して怪我を治します(一月)。", "type": "good" },
       { "u_cast_spell": { "id": "spell_speedup_healing_3" } },
       { "run_eocs": [ "EOC_SPEEDUP_HEALING_EXTRA_3" ] },

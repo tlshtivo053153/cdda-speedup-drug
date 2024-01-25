@@ -1,23 +1,9 @@
 [
   {
-    "//1": "効果時間の終了時に時間を進める。",
-    "//2": "time_since_cataclysmに値を代入すると値がずれるので",
-    "//3": "トリッキーなことをしている。",
     "id": "EOC_FIX_TIME",
     "type": "effect_on_condition",
     "effect": [
-      { "math": [ "_tsc", "=", "u_val('time_since_cataclysm: turns')" ] },
-      {
-        "//1": "ここで値をずらして元の値との差分をとる。",
-        "//2": "ゲーム開始時の大変動開始日の値が影響している。",
-        "math": [ "u_val('time_since_cataclysm: turns')", "+=", "0" ]
-      },
-      { "math": [ "_diff", "=", "_tsc - u_val('time_since_cataclysm: turns')" ] },
-      {
-        "//": "値の代入時にまたずれるので値を2倍に。",
-        "math": [ "_diff", "*=", "2" ]
-      },
-      { "math": [ "u_val('time_since_cataclysm: turns')", "+=", "_diff + v_compensation" ] }
+      { "math": [ "time('now')", "+=", "v_compensation" ] }
     ]
   },
   {
